@@ -36,7 +36,8 @@ class WdioTeamcityReporter extends WdioReporter {
       this[event] = (...args) =>
         flow(buildFormatter(event, opts), msg => {
           if (msg) {
-            this.write(msg);
+            //this.write(msg);
+            this.write("this is a test");
           }
         })(...args);
     });
